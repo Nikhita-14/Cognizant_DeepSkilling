@@ -1,0 +1,12 @@
+# Block IntelliJ configuration files in any subfolder
+**/.idea/
+**/*.iml
+**/out/
+**/gen/
+
+# Block compiled Java files
+**/*.class
+
+# Block OS temporary files
+.DS_Store
+Thumbs.db
