@@ -10,3 +10,9 @@
 # Block OS temporary files
 .DS_Store
 Thumbs.db
+
+# SQLite Database files
+*.db
+*.db-journal
+*.db-wal
+*.sqlite
