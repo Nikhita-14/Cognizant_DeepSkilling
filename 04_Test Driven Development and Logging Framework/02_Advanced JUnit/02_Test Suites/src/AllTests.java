@@ -1,0 +1,8 @@
+import org.junit.platform.suite.api.SelectClasses;
+import org.junit.platform.suite.api.Suite;
+
+@Suite
+@SelectClasses({ EvenCheckerTest.class })
+public class AllTests {
+    // Left empty on purpose
+}
