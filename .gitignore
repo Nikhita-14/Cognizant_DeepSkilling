@@ -16,3 +16,17 @@ Thumbs.db
 *.db-journal
 *.db-wal
 *.sqlite
+
+# Block local dependency JAR files
+**/lib/
+**/libs/
+*.jar
+
+# Block cloud storage sync files
+.unison.
+SyncLock.*
+~*
+
+# Block application log files
+*.log
+**/logs/
