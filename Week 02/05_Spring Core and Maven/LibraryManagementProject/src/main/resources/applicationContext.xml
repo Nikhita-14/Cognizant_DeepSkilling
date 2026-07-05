@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Define the BookRepository bean -->
+    <bean id="bookRepository" class="com.library.repository.BookRepository"/>
+
+    <!-- Define the BookService bean using BOTH Constructor and Setter Injection -->
+    <bean id="bookService" class="com.library.service.BookService">
+
+        <!-- Step 1: Constructor Injection (Passes the repository reference) -->
+        <constructor-arg ref="bookRepository"/>
+
+        <!-- Step 2: Setter Injection (Passes a value to the setServiceName method) -->
+        <property name="serviceName" value="Premium Library Management Engine"/>
+
+    </bean>
+
+</beans>
