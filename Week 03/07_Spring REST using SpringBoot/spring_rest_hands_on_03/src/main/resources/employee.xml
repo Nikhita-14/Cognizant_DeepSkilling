@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Department Master Records -->
+    <bean id="hrDept" class="com.cognizant.springlearn.model.Department">
+        <property name="id" value="1" />
+        <property name="name" value="Human Resources" />
+    </bean>
+
+    <bean id="techDept" class="com.cognizant.springlearn.model.Department">
+        <property name="id" value="2" />
+        <property name="name" value="Technology" />
+    </bean>
+
+    <bean id="financeDept" class="com.cognizant.springlearn.model.Department">
+        <property name="id" value="3" />
+        <property name="name" value="Finance" />
+    </bean>
+
+    <!-- Skill Master Records -->
+    <bean id="javaSkill" class="com.cognizant.springlearn.model.Skill">
+        <property name="id" value="101" />
+        <property name="name" value="Java Spring Boot" />
+    </bean>
+
+    <bean id="angularSkill" class="com.cognizant.springlearn.model.Skill">
+        <property name="id" value="102" />
+        <property name="name" value="Angular Frontend" />
+    </bean>
+
+    <!-- Employee Master Records -->
+    <bean id="emp1" class="com.cognizant.springlearn.model.Employee">
+        <property name="id" value="1" />
+        <property name="name" value="Alice Smith" />
+        <property name="department" ref="techDept" />
+        <property name="skills">
+            <list>
+                <ref bean="javaSkill" />
+                <ref bean="angularSkill" />
+            </list>
+        </property>
+    </bean>
+
+    <bean id="emp2" class="com.cognizant.springlearn.model.Employee">
+        <property name="id" value="2" />
+        <property name="name" value="Bob Jones" />
+        <property name="department" ref="hrDept" />
+        <property name="skills">
+            <list>
+                <ref bean="javaSkill" />
+            </list>
+        </property>
+    </bean>
+
+    <bean id="emp3" class="com.cognizant.springlearn.model.Employee">
+        <property name="id" value="3" />
+        <property name="name" value="Charlie Brown" />
+        <property name="department" ref="techDept" />
+        <property name="skills">
+            <list>
+                <ref bean="angularSkill" />
+            </list>
+        </property>
+    </bean>
+
+    <bean id="emp4" class="com.cognizant.springlearn.model.Employee">
+        <property name="id" value="4" />
+        <property name="name" value="Diana Prince" />
+        <property name="department" ref="financeDept" />
+        <property name="skills">
+            <list>
+                <ref bean="javaSkill" />
+                <ref bean="angularSkill" />
+            </list>
+        </property>
+    </bean>
+
+    <!-- Aggregation Collection Nodes -->
+    <bean id="employeeList" class="java.util.ArrayList">
+        <constructor-arg>
+            <list>
+                <ref bean="emp1" />
+                <ref bean="emp2" />
+                <ref bean="emp3" />
+                <ref bean="emp4" />
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean id="departmentList" class="java.util.ArrayList">
+        <constructor-arg>
+            <list>
+                <ref bean="hrDept" />
+                <ref bean="techDept" />
+                <ref bean="financeDept" />
+            </list>
+        </constructor-arg>
+    </bean>
+
+</beans>
