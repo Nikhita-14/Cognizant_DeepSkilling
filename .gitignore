@@ -57,3 +57,17 @@ buildNumber.properties
 **/.mvn/
 **/mvnw
 **/mvnw.cmd
+
+# Spring Boot, Hibernate and JPA Extensions
+.h2.db
+*.mv.db
+*.trace.db
+**/uploads/
+**/storage/
+
+# Additional IDE and System Caches
+**/nbproject/
+**/nbbuild/
+**/dist/
+Desktop.ini
+.navigation/
