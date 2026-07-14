@@ -1,0 +1,23 @@
+.formatstyle {
+    border: 2px solid #0056b3;
+    padding: 20px;
+    margin: 20px auto;
+    width: 400px;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.student-info p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 10px 0;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 5px;
+}
+
+.student-info span {
+    color: #333;
+    float: right;
+}
