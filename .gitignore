@@ -71,3 +71,29 @@ buildNumber.properties
 **/dist/
 Desktop.ini
 .navigation/
+
+#React and NodeJS
+# Block massive dependency folders (Crucial!)
+**/node_modules/
+jspm_packages/
+
+# Block production build outputs
+**/build/
+**/dist/
+
+# Block local environment files (contains secret keys/API tokens)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Block npm/yarn/pnpm debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Block IDE/Linter caches
+.eslintcache
+.stylelintcache
